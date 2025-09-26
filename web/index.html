@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HumanShield – Startseite</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+        line-height: 1.6;
+        --accent: #2563eb;
+        --surface: rgba(255, 255, 255, 0.9);
+        --surface-dark: rgba(15, 23, 42, 0.85);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: radial-gradient(circle at top, #1e3a8a, #0f172a);
+        color: #f8fafc;
+        display: flex;
+        flex-direction: column;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      a:hover,
+      a:focus {
+        text-decoration: underline;
+      }
+
+      header {
+        padding: 1.5rem 2rem;
+        background: rgba(15, 23, 42, 0.85);
+        backdrop-filter: blur(8px);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      header nav {
+        display: flex;
+        gap: 1.5rem;
+        font-weight: 600;
+      }
+
+      main {
+        flex: 1 1 auto;
+        display: grid;
+        place-items: center;
+        padding: 2rem;
+      }
+
+      .card {
+        width: min(720px, 100%);
+        border-radius: 24px;
+        padding: clamp(2rem, 5vw, 3rem);
+        background: var(--surface-dark);
+        box-shadow: 0 30px 80px rgba(8, 47, 73, 0.6);
+      }
+
+      .card h1 {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-size: clamp(2.3rem, 5vw, 3.2rem);
+      }
+
+      .card p {
+        margin-bottom: 1.25rem;
+        color: rgba(226, 232, 240, 0.9);
+      }
+
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.85rem 1.4rem;
+        border-radius: 999px;
+        background: linear-gradient(135deg, #2563eb, #38bdf8);
+        color: white;
+        font-weight: 600;
+        box-shadow: 0 20px 40px rgba(37, 99, 235, 0.35);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .cta:hover,
+      .cta:focus {
+        transform: translateY(-2px);
+        box-shadow: 0 24px 60px rgba(37, 99, 235, 0.45);
+      }
+
+      footer {
+        padding: 1.5rem 2rem;
+        text-align: center;
+        background: rgba(15, 23, 42, 0.75);
+        color: rgba(226, 232, 240, 0.75);
+      }
+
+      @media (max-width: 600px) {
+        header nav {
+          width: 100%;
+          justify-content: center;
+        }
+
+        .cta {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <strong>HumanShield</strong>
+      </div>
+      <nav>
+        <a href="/index.html">Start</a>
+        <a href="/support.html">Support</a>
+      </nav>
+    </header>
+    <main>
+      <article class="card">
+        <h1>Schütze deine Plattform vor Bots</h1>
+        <p>
+          HumanShield hilft dir dabei, verdächtige Zugriffe im Hintergrund zu
+          erkennen. Deine eigentliche Seite bleibt unverändert – nur wenn unser
+          Server Auffälligkeiten feststellt, erscheint ein zusätzlicher Check.
+        </p>
+        <p>
+          Starte den Python-Server und rufe deine bestehenden Seiten ganz
+          normal auf. Der Schutz greift automatisch, sobald ein verdächtiger
+          Aufruf erkannt wird.
+        </p>
+        <a class="cta" href="/support.html">Mehr erfahren</a>
+      </article>
+    </main>
+    <footer>© 2024 HumanShield – Intelligenter Bot-Schutz</footer>
+  </body>
+</html>
