@@ -1,0 +1,14 @@
+# Ignore Gradle wrapper binary
+gradle/wrapper/gradle-wrapper.jar
+
+# Ignore Gradle cache
+/.gradle/
+
+# Ignore build outputs
+/build/
+/app/build/
+
+# Android Studio files
+/.idea/
+.DS_Store
+local.properties
